@@ -78,7 +78,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
 
   return (
     <section 
-      className="relative w-full h-180 overflow-hidden"
+      className="relative w-full h-200 overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
