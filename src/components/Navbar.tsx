@@ -97,7 +97,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             variant="primary" 
             size="md" 
             onClick={onOpenQuote}
-            className="inline-flex shadow-md hover:shadow-lg px-3 py-1.5 text-[10px] sm:px-4 sm:py-2 sm:text-sm"
+            className="inline-flex shadow-md hover:shadow-lg px-1 py-1 text-[14px] sm:px-4 sm:py-2 sm:text-sm"
           >
             Get in Touch
           </Button>
