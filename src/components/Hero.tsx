@@ -78,7 +78,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
 
   return (
     <section 
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full h-200 overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -137,7 +137,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
                 <span>{slide.badge}</span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-8 drop-shadow-lg">
+              <h1 className="text-5xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-8 drop-shadow-lg">
                 {slide.title.split('\n')[0]}<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{slide.title.split('\n')[1] || "Preform Manufacturers"}</span>
               </h1>
