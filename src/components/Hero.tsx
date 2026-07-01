@@ -25,7 +25,7 @@ const slides = [
     subtitle: "Advanced machinery and high-speed production for superior packaging results.",
     ctaText: "Watch Process",
     ctaHref: "#technology",
-    image: "https://images.unsplash.com/photo-1565515024467-f49553f19106?auto=format&fit=crop&w=2000&q=80", // Production process
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", // Production process
     type: "image",
     imageAlt: "Manufacturing process",
     stats: { rate: "85,000", unit: "PPH", recyclable: "100%" }
@@ -36,7 +36,7 @@ const slides = [
     subtitle: "Eco-friendly PET packaging solutions trusted by leading brands worldwide with advanced lightweighting.",
     ctaText: "Discover More",
     ctaHref: "#why-choose-us",
-    image: "https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=2000&q=80",
+    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80",
     imageAlt: "Sustainable factory",
     stats: { rate: "68,000", unit: "PPH", recyclable: "100%" }
   },
@@ -46,7 +46,7 @@ const slides = [
     subtitle: "High-speed production, strict quality control, and advanced automation for superior packaging.",
     ctaText: "Explore Technology",
     ctaHref: "#technology",
-    image: "https://images.unsplash.com/photo-1537462715879-361eeb6b1c48?auto=format&fit=crop&w=2000&q=80",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
     imageAlt: "Industrial automation",
     stats: { rate: "85,000", unit: "PPH", recyclable: "100%" }
   },

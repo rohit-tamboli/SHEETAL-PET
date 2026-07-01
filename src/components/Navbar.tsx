@@ -58,14 +58,14 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8">
-          <a href="#" className="text-[#0A4EA3] font-bold text-sm">Home</a>
-          <a href="#about" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-sm">About Us</a>
+          <a href="#" className="text-[#0A4EA3] font-bold text-lg">Home</a>
+          <a href="#about" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-base">About Us</a>
           
           {/* Products Dropdown */}
           <div className="relative group py-2" 
                onMouseEnter={() => setProductsDropdownOpen(true)}
                onMouseLeave={() => setProductsDropdownOpen(false)}>
-            <a href="#products" className="text-[#4B5563] font-medium group-hover:text-[#0A4EA3] transition-colors text-sm inline-flex items-center gap-1">
+            <a href="#products" className="text-[#4B5563] font-medium group-hover:text-[#0A4EA3] transition-colors text-base inline-flex items-center gap-1">
               Products
               <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
             </a>
@@ -86,9 +86,9 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             )}
           </div>
 
-          <a href="#why-choose-us" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-sm">Our Group</a>
-          <a href="#industries" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-sm">Industries</a>
-          <a href="#clients" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-sm">Gallery</a>
+          <a href="#why-choose-us" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-base">Our Group</a>
+          <a href="#industries" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-base">Industries</a>
+          <a href="#clients" className="text-[#4B5563] font-medium hover:text-[#0A4EA3] transition-colors text-base">Gallery</a>
         </div>
 
         {/* CTA Button & Mobile Toggle */}
@@ -97,7 +97,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             variant="primary" 
             size="md" 
             onClick={onOpenQuote}
-            className="inline-flex shadow-md hover:shadow-lg px-1 py-1 text-[14px] sm:px-4 sm:py-2 sm:text-sm"
+            className="inline-flex shadow-md hover:shadow-lg px-1 py-1 text-[14px] sm:px-5 sm:py-3 sm:text-[15px]"
           >
             Get in Touch
           </Button>
