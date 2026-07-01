@@ -14,7 +14,7 @@ const slides = [
     subtitle: "From preforms to finished containers, we deliver high-quality sustainable packaging solutions that meet international standards.",
     ctaText: "Explore Products",
     ctaHref: "#products",
-    image: "/assets/factory-image.jpg", // Placeholder for factory image
+    image: "https://res.cloudinary.com/dmnmpn69n/image/upload/f_auto,q_auto,c_fill,w_1920,h_1080/v1782903469/Jul_1_2026_04_26_55_PM_ih8ohs.png", // Manufacturing plant
     type: "image",
     imageAlt: "Manufacturing plant",
     stats: { rate: "72,000", unit: "PPH", recyclable: "100%" }
@@ -25,9 +25,9 @@ const slides = [
     subtitle: "Advanced machinery and high-speed production for superior packaging results.",
     ctaText: "Watch Process",
     ctaHref: "#technology",
-    image: "/assets/video1.mp4", // Placeholder for video
-    type: "video",
-    imageAlt: "Manufacturing process video",
+    image: "https://images.unsplash.com/photo-1565515024467-f49553f19106?auto=format&fit=crop&w=2000&q=80", // Production process
+    type: "image",
+    imageAlt: "Manufacturing process",
     stats: { rate: "85,000", unit: "PPH", recyclable: "100%" }
   },
   {
@@ -120,7 +120,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 container mx-auto h-full flex items-center px-6 md:px-12">
+      <div className="relative z-10 container mx-auto h-full flex items-center px-4 md:px-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -131,7 +131,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
             className="grid grid-cols-1 gap-12 items-center w-full"
           >
             {/* Left Content */}
-            <div className="flex flex-col items-start w-full max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
+            <div className="flex flex-col items-center lg:items-start w-full max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-[#4F8DFF] text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#4F8DFF] animate-pulse"></div>
                 <span>{slide.badge}</span>
@@ -148,10 +148,10 @@ export default function Hero({ onOpenQuote }: HeroProps) {
 
               <a 
                 href={slide.ctaHref}
-                className="group bg-[#1D4ED8] hover:bg-[#1E40AF] text-white px-10 py-5 rounded-[12px] font-semibold text-lg transition-all duration-300 shadow-[0_10px_30px_rgba(29,78,216,0.4)] flex items-center gap-3 hover:scale-105 mx-auto lg:mx-0"
+                className="group bg-[#1D4ED8] hover:bg-[#1E40AF] text-white px-4 py-2.5 sm:px-10 sm:py-5 rounded-[12px] font-semibold text-sm sm:text-lg transition-all duration-300 shadow-[0_10px_30px_rgba(29,78,216,0.4)] flex items-center gap-3 hover:scale-105 mx-auto lg:mx-0"
               >
                 <span>{slide.ctaText}</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
@@ -162,15 +162,15 @@ export default function Hero({ onOpenQuote }: HeroProps) {
       {/* Slider Controls */}
       <button 
         onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-        className="absolute left-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white text-[#081C3A] flex items-center justify-center hover:scale-110 transition-transform shadow-xl z-20"
+        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-white text-[#081C3A] flex items-center justify-center hover:scale-110 transition-transform shadow-xl z-20"
       >
-        <ChevronLeft className="w-8 h-8" />
+        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
       <button 
         onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-        className="absolute right-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white text-[#081C3A] flex items-center justify-center hover:scale-110 transition-transform shadow-xl z-20"
+        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-white text-[#081C3A] flex items-center justify-center hover:scale-110 transition-transform shadow-xl z-20"
       >
-        <ChevronRight className="w-8 h-8" />
+        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
 
       {/* Bottom Pagination */}

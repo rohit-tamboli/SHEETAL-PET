@@ -47,12 +47,12 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between max-w-[1280px]">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-[#0A4EA3] to-[#123B72] flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+          <div className="hidden sm:flex w-11 h-11 rounded-[10px] bg-gradient-to-br from-[#0A4EA3] to-[#123B72] items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
             SPI
           </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-black text-[#111827] tracking-tight leading-none">SHEETAL PET</span>
-            <span className="text-[10px] font-bold tracking-[0.18em] text-[#0A4EA3] uppercase mt-1">PET Preforms & Closures</span>
+            <span className="text-xl font-black text-[#111827] tracking-tight leading-none">SHEETAL PET</span>
+            <span className="hidden sm:block text-[10px] font-bold tracking-[0.18em] text-[#0A4EA3] uppercase mt-1">PET Preforms & Closures</span>
           </div>
         </a>
 
@@ -97,17 +97,17 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             variant="primary" 
             size="md" 
             onClick={onOpenQuote}
-            className="hidden sm:inline-flex shadow-md hover:shadow-lg"
+            className="inline-flex shadow-md hover:shadow-lg px-3 py-1.5 text-[10px] sm:px-4 sm:py-2 sm:text-sm"
           >
             Get in Touch
           </Button>
           
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#111827] hover:text-[#0A4EA3] rounded-[8px] hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-0.5 text-[#111827] hover:text-[#0A4EA3] rounded-[8px] hover:bg-gray-100 transition-colors"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-9 h-9" /> : <Menu className="w-9 h-9" />}
           </button>
         </div>
       </nav>
@@ -116,12 +116,24 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-gray-100 px-6 py-6 shadow-2xl animate-fade-in">
           <div className="flex flex-col space-y-4">
-            <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-[#0A4EA3] font-bold text-base py-1">Home</a>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50">About Us</a>
-            <a href="#products" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50">Products</a>
-            <a href="#why-choose-us" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50">Our Group</a>
-            <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50">Industries</a>
-            <a href="#clients" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50">Gallery</a>
+            <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-[#0A4EA3] font-bold text-base py-1 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0A4EA3]"></span> Home
+            </a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span> About Us
+            </a>
+            <a href="#products" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span> Products
+            </a>
+            <a href="#why-choose-us" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span> Our Group
+            </a>
+            <a href="#industries" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span> Industries
+            </a>
+            <a href="#clients" onClick={() => setMobileMenuOpen(false)} className="text-[#111827] font-medium text-base py-1 border-t border-gray-50 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span> Gallery
+            </a>
             
             <div className="pt-4 border-t border-gray-100">
               <Button 
