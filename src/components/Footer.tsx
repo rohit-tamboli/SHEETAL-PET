@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-[8px] bg-[#0A4EA3] flex items-center justify-center text-white font-black text-lg">
                 SPI
               </div>
-              <span className="text-2xl font-black text-white tracking-tight">SHEETAL PET INDUSTRIES</span>
+              <span className="text-2xl font-black text-white tracking-tight">sheetalapetindustries</span>
             </a>
             <p className="text-xs leading-relaxed text-gray-400 max-w-sm">
               Premier manufacturer of high-precision PET Preforms, Containers, Bottles, and SACMI Compression Closures. Powering India's leading beverage, edible oil, and FMCG brands since 2001.
@@ -65,11 +65,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <PhoneCall className="w-4 h-4 text-green-400 flex-shrink-0" />
-                <a href="tel:+917024806103" className="hover:text-white font-mono">7024806103, 8319993571</a>
+                <a href="tel:+918349576332" className="hover:text-white font-mono">8349576332, 8319993571</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#64B5F6] flex-shrink-0" />
                 <a href="mailto:sheetalapetindustries@gmail.com" className="hover:text-white">sheetalapetindustries@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-2.5 pt-1">
+                <ShieldCheck className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                <span>Paid-up share capital: ₹7 crore</span>
               </div>
             </div>
             
@@ -84,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-          <p>© {new Date().getFullYear()} Sheetal Pet Industries. All rights reserved. PET Preforms & Closures Division.</p>
+          <p>© {new Date().getFullYear()} sheetalapetindustries. All rights reserved. PET Preforms & Closures Division.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-400 transition-colors">Terms of Supply</a>

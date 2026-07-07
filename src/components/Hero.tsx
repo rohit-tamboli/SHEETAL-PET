@@ -25,20 +25,10 @@ const slides = [
     subtitle: "Advanced machinery and high-speed production for superior packaging results.",
     ctaText: "Watch Process",
     ctaHref: "#technology",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", // Production process
-    type: "image",
-    imageAlt: "Manufacturing process",
+    image: "https://res.cloudinary.com/dmnmpn69n/video/upload/v1783423698/v1_bthldw.mp4",
+    type: "video",
+    imageAlt: "Manufacturing process video",
     stats: { rate: "85,000", unit: "PPH", recyclable: "100%" }
-  },
-  {
-    badge: "SUSTAINABLE PACKAGING",
-    title: "Sustainable Packaging for Modern Industries",
-    subtitle: "Eco-friendly PET packaging solutions trusted by leading brands worldwide with advanced lightweighting.",
-    ctaText: "Discover More",
-    ctaHref: "#why-choose-us",
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Sustainable factory",
-    stats: { rate: "68,000", unit: "PPH", recyclable: "100%" }
   },
   {
     badge: "STATE-OF-THE-ART TECH",
@@ -46,8 +36,9 @@ const slides = [
     subtitle: "High-speed production, strict quality control, and advanced automation for superior packaging.",
     ctaText: "Explore Technology",
     ctaHref: "#technology",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Industrial automation",
+    image: "https://res.cloudinary.com/dmnmpn69n/video/upload/v1783423698/v_gflbm5.mp4",
+    type: "video",
+    imageAlt: "Industrial automation video",
     stats: { rate: "85,000", unit: "PPH", recyclable: "100%" }
   },
   {
@@ -56,8 +47,9 @@ const slides = [
     subtitle: "Serving beverage, pharmaceutical, FMCG, food, and industrial sectors with reliable, high-volume packaging solutions.",
     ctaText: "Contact Us",
     ctaHref: "#contact",
-    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=2000&q=80",
-    imageAlt: "Distribution center",
+    image: "https://res.cloudinary.com/dmnmpn69n/video/upload/v1783422083/PET_3_l1wczk.mp4",
+    type: "video",
+    imageAlt: "Distribution center video",
     stats: { rate: "75,000", unit: "PPH", recyclable: "100%" }
   }
 ];
@@ -78,7 +70,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
 
   return (
     <section 
-      className="relative w-full h-200 overflow-hidden"
+      className="relative w-full h-[100dvh] overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -120,7 +112,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 container mx-auto h-full flex items-center px-4 md:px-12">
+        <div className="relative z-10 container mx-auto h-full flex items-center px-4 sm:px-6 md:px-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -128,21 +120,21 @@ export default function Hero({ onOpenQuote }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 gap-12 items-center w-full"
+            className="grid grid-cols-1 gap-6 sm:gap-12 items-center w-full"
           >
             {/* Left Content */}
-            <div className="flex flex-col items-center lg:items-start w-full max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-[#4F8DFF] text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
+            <div className="flex flex-col items-center lg:items-start w-full max-w-3xl mx-auto lg:mx-0 text-center lg:text-left pt-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-md text-[#4F8DFF] text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 border border-white/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#4F8DFF] animate-pulse"></div>
                 <span>{slide.badge}</span>
               </div>
 
-              <h1 className="text-5xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-8 drop-shadow-lg">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-4 sm:mb-8 drop-shadow-lg">
                 {slide.title.split('\n')[0]}<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{slide.title.split('\n')[1] || "Preform Manufacturers"}</span>
               </h1>
 
-              <p className="text-gray-100 text-lg md:text-xl font-light leading-relaxed mb-10 drop-shadow-md">
+              <p className="text-gray-100 text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-6 sm:mb-10 drop-shadow-md">
                 {slide.subtitle}
               </p>
 
