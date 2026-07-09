@@ -236,7 +236,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
               Gallery
             </a>
 
-            <div className="pt-4 border-t border-gray-100">
+            {/* <div className="pt-4 border-t border-gray-100">
               <Button
                 variant="primary"
                 size="lg"
@@ -248,7 +248,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
               >
                 Get in Touch
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
