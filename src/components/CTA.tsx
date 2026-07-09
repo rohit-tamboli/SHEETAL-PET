@@ -1,6 +1,12 @@
-import React from 'react';
-import { ArrowRight, PhoneCall, Mail, ShieldCheck, Factory, Send } from 'lucide-react';
-import Button from './Button';
+import React from "react";
+import {
+  ArrowRight,
+  PhoneCall,
+  ShieldCheck,
+  Factory,
+  Send,
+  Zap,
+} from "lucide-react";
 
 interface CTAProps {
   onOpenQuote: () => void;
@@ -8,76 +14,437 @@ interface CTAProps {
 
 export default function CTA({ onOpenQuote }: CTAProps) {
   return (
-    <section className="bg-gradient-to-br from-[#071F42] via-[#0A4EA3] to-[#123B72] py-20 px-6 text-white relative overflow-hidden">
-      {/* Background industrial grid overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+    <section
+      className="
+        relative overflow-hidden text-white
+        bg-gradient-to-br
+        from-[#071F42]
+        via-[#0A4EA3]
+        to-[#123B72]
 
-      <div className="container mx-auto max-w-[1280px] relative z-10">
-        <div className="bg-white/10 backdrop-blur-lg rounded-[28px] p-8 sm:p-14 lg:p-16 border border-white/20 shadow-2xl">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Content */}
+        px-4 py-12
+        sm:px-6 sm:py-16
+        lg:py-20
+      "
+    >
+      {/* Background Grid */}
+      <div
+        className="
+          pointer-events-none absolute inset-0
+          bg-[radial-gradient(#ffffff_1px,transparent_1px)]
+          [background-size:20px_20px]
+          opacity-[0.10]
+          sm:opacity-15
+        "
+      />
+
+      {/* Mobile Glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-24 -top-24
+          h-72 w-72
+          rounded-full
+          bg-blue-300/20
+          blur-[100px]
+
+          lg:hidden
+        "
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1280px]">
+        <div
+          className="
+            overflow-hidden
+            rounded-[22px]
+            border border-white/15
+            bg-white/[0.08]
+            p-5
+            shadow-2xl
+            backdrop-blur-lg
+
+            min-[390px]:p-6
+
+            sm:rounded-[28px]
+            sm:p-10
+
+            lg:p-16
+          "
+        >
+          <div
+            className="
+              grid grid-cols-1
+              gap-8
+              items-center
+
+              sm:gap-10
+
+              lg:grid-cols-12
+              lg:gap-12
+            "
+          >
+            {/* LEFT CONTENT */}
+
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 text-[#64B5F6] text-xs font-bold uppercase tracking-widest mb-6">
-                <Factory className="w-4 h-4 text-white" />
-                <span>Pan-India Manufacturing Capacity</span>
+              {/* Badge */}
+
+              <div
+                className="
+                  mb-4
+                  inline-flex
+                  max-w-full
+                  items-center
+                  gap-2
+                  rounded-full
+                  border border-white/10
+                  bg-white/10
+                  px-3
+                  py-1.5
+                  backdrop-blur-md
+
+                  sm:mb-6
+                  sm:px-3.5
+                "
+              >
+                <Factory className="h-3.5 w-3.5 shrink-0 text-white sm:h-4 sm:w-4" />
+
+                <span
+                  className="
+                    truncate
+                    text-[9px]
+                    font-bold
+                    uppercase
+                    tracking-[0.12em]
+                    text-[#8AC8FF]
+
+                    sm:text-xs
+                    sm:tracking-widest
+                  "
+                >
+                  Pan-India Manufacturing Capacity
+                </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.12] mb-6 text-white">
-                Ready to Upgrade Your <br />
-                <span className="text-[#64B5F6]">Packaging Line Efficiency?</span>
+              {/* Heading */}
+
+              <h2
+                className="
+                  max-w-[350px]
+                  text-[30px]
+                  font-black
+                  leading-[1.08]
+                  tracking-[-0.035em]
+                  text-white
+
+                  min-[390px]:max-w-[380px]
+                  min-[390px]:text-[34px]
+
+                  sm:max-w-3xl
+                  sm:text-4xl
+                  sm:leading-[1.12]
+
+                  lg:text-5xl
+                "
+              >
+                Ready to Upgrade Your{" "}
+                <span
+                  className="
+                    text-transparent
+                    bg-clip-text
+                    bg-gradient-to-r
+                    from-[#7CC4FF]
+                    to-[#B9E2FF]
+                  "
+                >
+                  Packaging Line Efficiency?
+                </span>
               </h2>
 
-              <p className="text-blue-100 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">
-                Partner with Sheetal Pet Industries for precision PET preforms, 100% recyclable bottles, and high-speed SACMI closures. Speak directly with our senior polymer engineers for custom neck finishes and CAD feasibility.
+              {/* Description */}
+
+              <p
+                className="
+                  mt-5
+                  max-w-[620px]
+                  text-[14px]
+                  leading-[1.65]
+                  text-blue-100/85
+
+                  sm:mt-6
+                  sm:text-base
+
+                  lg:text-lg
+                  lg:leading-relaxed
+                "
+              >
+                Partner with Sheetal Pet Industries for precision PET
+                preforms, recyclable bottles, and high-speed SACMI closures.
+                Connect with our technical team for custom neck finishes and
+                product feasibility.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <button 
+              {/* BUTTONS */}
+
+              <div
+                className="
+                  mt-7
+                  flex
+                  w-full
+                  flex-col
+                  gap-3
+
+                  sm:mt-8
+                  sm:w-auto
+                  sm:flex-row
+                  sm:flex-wrap
+                  sm:items-center
+                  sm:gap-4
+                "
+              >
+                {/* Primary CTA */}
+
+                <button
+                  type="button"
                   onClick={onOpenQuote}
-                  className="bg-white text-[#0A4EA3] hover:bg-blue-50 px-8 py-4 rounded-[10px] font-extrabold text-base transition-all shadow-xl flex items-center gap-2 group"
+                  className="
+                    group
+                    flex
+                    h-12
+                    w-full
+                    items-center
+                    justify-center
+                    gap-2
+                    rounded-xl
+                    bg-white
+                    px-4
+                    text-[13px]
+                    font-extrabold
+                    text-[#0A4EA3]
+                    shadow-xl
+                    transition-all
+                    duration-300
+
+                    hover:-translate-y-0.5
+                    hover:bg-blue-50
+
+                    active:translate-y-0
+                    active:scale-[0.98]
+
+                    sm:h-14
+                    sm:w-auto
+                    sm:px-7
+                    sm:text-base
+                  "
                 >
-                  <Send className="w-5 h-5 text-[#0A4EA3]" />
-                  <span>Request Custom Specification</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Send className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+
+                  <span className="sm:hidden">
+                    Request Specification
+                  </span>
+
+                  <span className="hidden sm:inline">
+                    Request Custom Specification
+                  </span>
+
+                  <ArrowRight
+                    className="
+                      h-4 w-4
+                      shrink-0
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+
+                      sm:h-5 sm:w-5
+                    "
+                  />
                 </button>
 
-                <a 
+                {/* Phone CTA */}
+
+                <a
                   href="tel:+911145678900"
-                  className="border-2 border-white/40 hover:border-white text-white px-7 py-4 rounded-[10px] font-bold text-base transition-all flex items-center gap-2.5 bg-white/5 hover:bg-white/10"
+                  className="
+                    flex
+                    h-12
+                    w-full
+                    items-center
+                    justify-center
+                    gap-2.5
+                    rounded-xl
+                    border border-white/30
+                    bg-white/[0.06]
+                    px-4
+                    text-sm
+                    font-bold
+                    text-white
+                    backdrop-blur-sm
+                    transition-all
+                    duration-300
+
+                    hover:border-white/60
+                    hover:bg-white/[0.12]
+
+                    active:scale-[0.98]
+
+                    sm:h-14
+                    sm:w-auto
+                    sm:px-7
+                    sm:text-base
+                  "
                 >
-                  <PhoneCall className="w-5 h-5 text-green-400 animate-pulse" />
+                  <PhoneCall className="h-4 w-4 shrink-0 text-green-400 sm:h-5 sm:w-5" />
+
                   <span>+91 (11) 4567-8900</span>
                 </a>
               </div>
             </div>
 
-            {/* Right Trust Column */}
-            <div className="lg:col-span-4 bg-black/30 backdrop-blur-md p-8 rounded-[20px] border border-white/15 space-y-6">
-              <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-[10px] bg-green-500/20 text-green-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <ShieldCheck className="w-5 h-5" />
+            {/* TRUST COLUMN */}
+
+            <div
+              className="
+                grid
+                grid-cols-1
+                gap-3
+
+                sm:grid-cols-2
+                sm:gap-4
+
+                lg:col-span-4
+                lg:grid-cols-1
+                lg:gap-0
+                lg:rounded-[20px]
+                lg:border
+                lg:border-white/15
+                lg:bg-black/25
+                lg:p-8
+                lg:backdrop-blur-md
+              "
+            >
+              {/* Trust Item 1 */}
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                  rounded-2xl
+                  border border-white/10
+                  bg-black/20
+                  p-4
+                  backdrop-blur-sm
+
+                  sm:p-5
+
+                  lg:rounded-none
+                  lg:border-0
+                  lg:bg-transparent
+                  lg:p-0
+                  lg:backdrop-blur-none
+                "
+              >
+                <div
+                  className="
+                    flex
+                    h-10 w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-green-500/15
+                    text-green-400
+                  "
+                >
+                  <ShieldCheck className="h-5 w-5" />
                 </div>
+
                 <div>
-                  <h4 className="font-bold text-sm text-white">BRCGS Grade A Hygiene</h4>
-                  <p className="text-xs text-gray-300 mt-1 leading-relaxed">Certified cleanroom manufacturing adhering strictly to global food safety benchmarks.</p>
+                  <h4 className="text-sm font-bold text-white">
+                    BRCGS Grade A Hygiene
+                  </h4>
+
+                  <p
+                    className="
+                      mt-1.5
+                      text-[12px]
+                      leading-[1.55]
+                      text-white/65
+
+                      sm:text-[13px]
+                    "
+                  >
+                    Certified cleanroom manufacturing aligned with global food
+                    safety benchmarks.
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 pt-4 border-t border-white/10">
-                <div className="w-10 h-10 rounded-[10px] bg-[#64B5F6]/20 text-[#64B5F6] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  ⚡
+              {/* Trust Item 2 */}
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                  rounded-2xl
+                  border border-white/10
+                  bg-black/20
+                  p-4
+                  backdrop-blur-sm
+
+                  sm:p-5
+
+                  lg:mt-6
+                  lg:rounded-none
+                  lg:border-x-0
+                  lg:border-b-0
+                  lg:border-t
+                  lg:border-white/10
+                  lg:bg-transparent
+                  lg:px-0
+                  lg:pb-0
+                  lg:pt-6
+                  lg:backdrop-blur-none
+                "
+              >
+                <div
+                  className="
+                    flex
+                    h-10 w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#64B5F6]/15
+                    text-[#64B5F6]
+                  "
+                >
+                  <Zap className="h-5 w-5" />
                 </div>
+
                 <div>
-                  <h4 className="font-bold text-sm text-white">4-Hour Engineering Turnaround</h4>
-                  <p className="text-xs text-gray-300 mt-1 leading-relaxed">Submit your bottle drawing or sample specs and receive comprehensive technical feedback.</p>
+                  <h4 className="text-sm font-bold text-white">
+                    4-Hour Engineering Turnaround
+                  </h4>
+
+                  <p
+                    className="
+                      mt-1.5
+                      text-[12px]
+                      leading-[1.55]
+                      text-white/65
+
+                      sm:text-[13px]
+                    "
+                  >
+                    Submit your bottle drawings or specifications and receive
+                    fast technical feedback.
+                  </p>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
