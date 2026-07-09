@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 
 export default function Clients() {
   const clients = [
+    { name: "Amarkantak Minerals", category: "Mineral Water Leader", logoText: "Amarkantak", color: "from-red-600 to-red-700" },
     { name: "Bisleri", category: "Mineral Water Leader", logoText: "Bisleri", color: "from-teal-600 to-emerald-700" },
     { name: "Adani Wilmar", category: "Fortune Edible Oils", logoText: "adani wilmar", color: "from-blue-700 to-indigo-800" },
     { name: "PepsiCo", category: "Global CSD & Beverages", logoText: "PEPSICO", color: "from-red-600 via-blue-700 to-blue-900" },
