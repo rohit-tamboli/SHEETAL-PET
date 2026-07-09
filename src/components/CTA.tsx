@@ -295,7 +295,7 @@ export default function CTA({ onOpenQuote }: CTAProps) {
                 >
                   <PhoneCall className="h-4 w-4 shrink-0 text-green-400 sm:h-5 sm:w-5" />
 
-                  <span>+91 (11) 4567-8900</span>
+                  <span>7024806103, 8319993571</span>
                 </a>
               </div>
             </div>
