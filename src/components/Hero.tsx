@@ -124,17 +124,17 @@ export default function Hero({ onOpenQuote }: HeroProps) {
           >
             {/* Left Content */}
             <div className="flex flex-col items-center lg:items-start w-full max-w-3xl mx-auto lg:mx-0 text-center lg:text-left pt-20">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-md text-[#4F8DFF] text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 border border-white/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-md text-[#4F8DFF] text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-10 sm:mb-6 border border-white/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#4F8DFF] animate-pulse"></div>
                 <span>{slide.badge}</span>
               </div>
 
-              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-4 sm:mb-8 drop-shadow-lg">
+              <h1 className="text-5xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-10 sm:mb-8 drop-shadow-lg">
                 {slide.title.split('\n')[0]}<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{slide.title.split('\n')[1] || "Preform Manufacturers"}</span>
               </h1>
 
-              <p className="text-gray-100 text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-6 sm:mb-10 drop-shadow-md">
+              <p className="text-gray-100 text-lg sm:text-lg md:text-xl font-light leading-relaxed mb-16 sm:mb-10 drop-shadow-md">
                 {slide.subtitle}
               </p>
 
