@@ -51,8 +51,8 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             SPI
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-black text-[#111827] tracking-tight leading-none">sheetalapetindustries</span>
-            <span className="hidden sm:block text-[10px] font-bold tracking-[0.18em] text-[#0A4EA3] uppercase mt-1">PET Preforms & Closures</span>
+            <span className="text-xl sm:text-xl font-black text-[#111827] tracking-tight leading-none">Sheetala Pet Industries</span>
+            {/* <span className="hidden sm:block text-[10px] font-bold tracking-[0.18em] text-[#0A4EA3] uppercase mt-1">PET Preforms & Closures</span> */}
           </div>
         </a>
 
@@ -97,7 +97,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             variant="primary" 
             size="md" 
             onClick={onOpenQuote}
-            className="inline-flex shadow-md hover:shadow-lg px-3 py-1.5 text-[10px] sm:px-4 sm:py-2 sm:text-sm"
+            className="inline-flex shadow-md hover:shadow-lg px-3 py-1.5 text-[12px] sm:px-4 sm:py-2 sm:text-base"
           >
             Get in Touch
           </Button>
